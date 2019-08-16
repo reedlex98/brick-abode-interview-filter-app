@@ -1,0 +1,71 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #e0e0e0
+}
+
+.filterForm{
+    @extend .fields;
+    position: relative;
+    background-color: #005;
+    color:white;
+    overflow: hidden;
+    width: 70vw;
+    transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    h1{
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        font-size: 1.5em;
+    }
+    box-shadow: 0 0 30px #a0a0a0
+}
+.formFields{
+    border-top: 1px solid rgba(255 , 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: display 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    .fields{
+        margin-top: 30px;
+    }
+}
+.collapseToggler{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 1.5em;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+.fields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.pairsField{
+    width: 42%;
+    select{
+        width: 100%;
+        height: 50px;
+    }
+    margin-right: 25px;
+}
+.dateStartField, .dateEndField{
+    width: 20%;
+    input{
+        width:100%;
+    }
+    margin-right: 25px;
+}
+.minPriceField,.maxPriceField,.minQtyField,.maxQtyField{
+    width: 20%;
+    margin-right: 25px;
+}
